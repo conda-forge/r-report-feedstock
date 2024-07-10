@@ -1,4 +1,4 @@
-{% set version = '0.5.8' %}
+{% set version = "0.5.9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/report_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/report/report_{{ version }}.tar.gz
-  sha256: 017320c21373cc9de8061951dd95147f2468fabc8a9d12fcc516a50c65c4383b
+  sha256: dd47803c2a3e97e311f9e65d00c04c376e70e466508111c4c52e7389ff24bd1c
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -48,10 +48,7 @@ about:
   home: https://easystats.github.io/report/
   dev_url: https://github.com/easystats/report/
   license: MIT
-  summary: "The aim of the 'report' package is to bridge the gap between R\u2019s output and
-    the formatted results contained in your manuscript. This package converts statistical
-    models and data frames into textual reports suited for publication, ensuring standardization
-    and quality in results reporting."
+  summary: "The aim of the 'report' package is to bridge the gap between R’s output and the formatted results contained in your manuscript. This package converts statistical models and data frames into textual reports suited for publication, ensuring standardization and quality in results reporting."
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
